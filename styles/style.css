@@ -1,3 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:700|Lucida%20Console:400");
+body {
+  font-family: "Lucida Console";
+  font-weight: 400;
+  background-color: #11131f;
+  color: white;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 90%;
+} /* 16px */
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+input[type=checkbox] {
+  border: 1px solid #3d3e82;
+}
+input[type=checkbox]:checked {
+  background-color: #5472e4;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: #11131f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 80vh;
+  width: 30vw;
+  background-color: #11131f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  height: 5%;
+  width: 100%;
+  background-color: #11131f;
+  text-align: center;
+}
+
+.passwordArea {
+  height: 10%;
+  width: 100%;
+  background-color: #141726;
+}
+
+.form {
+  height: 70%;
+  width: 100%;
+  background-color: #141726;
+}
 
 /*# sourceMappingURL=style.css.map */

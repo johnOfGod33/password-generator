@@ -1,0 +1,97 @@
+$bgc: #11131f;
+$componentbgc: #141726;
+$buttonbgc: #5472e4;
+$border: #3d3e82;
+$buttonbgcHover: #3e63dd;
+$passwordColor: #d6e1ff;
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:700|Lucida%20Console:400");
+
+body {
+  font-family: "Lucida Console";
+  font-weight: 400;
+  background-color: $bgc;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 90%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+input[type="checkbox"] {
+  border: 1px solid $border;
+
+  &:checked {
+    background-color: $buttonbgc;
+  }
+}
+
+@mixin sizeBox($height, $width, $bgc) {
+  height: $height;
+  width: $width;
+  background-color: $bgc;
+}
+
+@mixin flexBox($justifyContent, $alignItem, $flexDirection: row) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+
+main {
+  @include sizeBox(100vh, 100%, $bgc);
+  @include flexBox(center, center);
+}
+.container {
+  @include sizeBox(80vh, 30vw, $bgc);
+  @include flexBox(space-between, center, column);
+}
+
+.title {
+  @include sizeBox(5%, 100%, $bgc);
+  text-align: center;
+}
+
+.passwordArea {
+  @include sizeBox(10%, 100%, $componentbgc);
+}
+
+.form {
+  @include sizeBox(70%, 100%, $componentbgc);
+}
