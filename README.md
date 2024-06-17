@@ -6,35 +6,38 @@ Depending on the chosen criteria we'll have a weak, medium, strong and very stro
 
 # FEATURES
 
-Generate password
+. Generate password
 
-1.  Weak:
+1.  Weak
 
-    . Conditions:
+    . Conditions
 
         . Between 6 and 8 characters
         . Uses only one category of characters (lowercase letters, uppercase letters, numbers, or symbols)
 
 2.  Medium
 
-    . Conditions:
+    . Conditions
 
         . Between 8 and 12 characters
-        . Uses at least two categories of characters (e.g., uppercase letters and numbers)
+        . Uses at least two
+        categories of characters (e.g., uppercase letters and numbers)
 
 3.  Strong
 
-    . Conditions:
+    . Conditions
 
         . Between 12 and 16 characters
         . Uses at least three categories of characters (lowercase letters, uppercase letters, numbers, or symbols)
 
 4.  Very Strong
 
-    . Conditions:
+    . Conditions
 
         .More than 16 characters
         .Uses all categories of characters (lowercase letters, uppercase letters, numbers, symbols)
+
+. Copy the password generated
 
 # TECH
 
