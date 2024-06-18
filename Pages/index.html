@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="title">
+          <h5>Password Generator</h5>
+        </div>
+        <div class="passwordArea">
+          <div class="passwordArea_password">ighrhruhuirereui</div>
+          <div class="passwordArea_copyIcon">
+            <img src="../assets/copy-regular.svg" alt="copy" />
+          </div>
+        </div>
+        <div class="passwordSettings">
+          <div class="passwordSettings_options">
+            <div class="passwordSettings_options_characterLength">
+              <div class="passwordSettings_options_characterLength_info">
+                <div>Character Length</div>
+                <div
+                  class="passwordSettings_options_characterLength_info_value"
+                ></div>
+              </div>
+              <div class="passwordSettings_options_characterLength_input">
+                <input type="range" min="0" max="20" step="1" />
+              </div>
+            </div>
+            <div class="passwordSettings_options_checkboxs">
+              <div>
+                <input type="checkbox" id="uppercase_checkbox" />
+                <label for="uppercase_checkbox">Include Uppercase</label>
+              </div>
+              <div>
+                <input type="checkbox" id="lowercase_checkbox" />
+                <label for="lowercase_checkbox">Include Lowercase</label>
+              </div>
+              <div>
+                <input type="checkbox" id="numbers_checkbox" />
+                <label for="numbers_checkbox">Include Numbers</label>
+              </div>
+              <div>
+                <input type="checkbox" id="symbols_checkbox" />
+                <label for="symbols_checkbox">Include Symbols</label>
+              </div>
+            </div>
+            <div class="passwordSettings_options_passwordStrengthInfo">
+              <div>STRENGTH</div>
+              <div>
+                <div>WEAK</div>
+                <div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="passwordSettings_options_generateButton">
+              <button>Generate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../Scripts/index.js"></script>
+    <script src="../Scripts/renderCharacterLength.js"></script>
+  </body>
+</html>

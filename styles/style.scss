@@ -1,8 +1,8 @@
-$bgc: #11131f;
-$componentbgc: #141726;
-$buttonbgc: #5472e4;
+$bgc: #18111b;
+$componentbgc: #3d224e;
+$buttonbgc: #8e4ec6;
+$buttonbgcHover: #9a5cd0;
 $border: #3d3e82;
-$buttonbgcHover: #3e63dd;
 $passwordColor: #d6e1ff;
 
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:700|Lucida%20Console:400");
@@ -53,14 +53,6 @@ small {
   font-size: 0.75rem; /* 12px */
 }
 
-input[type="checkbox"] {
-  border: 1px solid $border;
-
-  &:checked {
-    background-color: $buttonbgc;
-  }
-}
-
 @mixin sizeBox($height, $width, $bgc) {
   height: $height;
   width: $width;
@@ -90,8 +82,79 @@ main {
 
 .passwordArea {
   @include sizeBox(10%, 100%, $componentbgc);
+  @include flexBox(space-around, center);
+  &_password {
+    @include sizeBox(80%, 80%, $componentbgc);
+    @include flexBox(flex-start, center);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: $passwordColor;
+  }
+  &_copyIcon {
+    @include sizeBox(50%, 10%, $componentbgc);
+    img {
+      @include sizeBox(100%, 100%, $componentbgc);
+      cursor: pointer;
+    }
+  }
 }
 
-.form {
+.passwordSettings {
   @include sizeBox(70%, 100%, $componentbgc);
+  @include flexBox(center, center);
+
+  &_options {
+    @include sizeBox(90%, 90%, $componentbgc);
+    @include flexBox(space-between, flex-start, column);
+
+    &_characterLength {
+      @include sizeBox(15%, 100%, $componentbgc);
+
+      &_info {
+        @include sizeBox(40%, 100%, $componentbgc);
+        @include flexBox(space-between, center);
+      }
+
+      &_input {
+        @include sizeBox(40%, 100%, $componentbgc);
+        input[type="range"] {
+          @include sizeBox(100%, 100%, $buttonbgc);
+        }
+      }
+    }
+
+    &_checkboxs {
+      @include sizeBox(40%, 100%, $componentbgc);
+      @include flexBox(space-between, flex-start, column);
+
+      div {
+        @include flexBox(space-between, center);
+        input {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &_passwordStrengthInfo {
+      padding: 0 5%;
+      @include sizeBox(15%, 90%, $bgc);
+      @include flexBox(space-between, center);
+    }
+
+    &_generateButton {
+      @include sizeBox(15%, 100%, $buttonbgc);
+      button {
+        @include flexBox(center, center);
+        @include sizeBox(100%, 100%, $buttonbgc);
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 1.2rem;
+        &:hover {
+          background-color: $buttonbgcHover;
+        }
+      }
+    }
+  }
 }

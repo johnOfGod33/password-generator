@@ -2,7 +2,7 @@
 body {
   font-family: "Lucida Console";
   font-weight: 400;
-  background-color: #11131f;
+  background-color: #18111b;
   color: white;
 }
 
@@ -44,17 +44,10 @@ small {
   font-size: 0.75rem; /* 12px */
 }
 
-input[type=checkbox] {
-  border: 1px solid #3d3e82;
-}
-input[type=checkbox]:checked {
-  background-color: #5472e4;
-}
-
 main {
   height: 100vh;
   width: 100%;
-  background-color: #11131f;
+  background-color: #18111b;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -64,7 +57,7 @@ main {
 .container {
   height: 80vh;
   width: 30vw;
-  background-color: #11131f;
+  background-color: #18111b;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,20 +67,134 @@ main {
 .title {
   height: 5%;
   width: 100%;
-  background-color: #11131f;
+  background-color: #18111b;
   text-align: center;
 }
 
 .passwordArea {
   height: 10%;
   width: 100%;
-  background-color: #141726;
+  background-color: #3d224e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.passwordArea_password {
+  height: 80%;
+  width: 80%;
+  background-color: #3d224e;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d6e1ff;
+}
+.passwordArea_copyIcon {
+  height: 50%;
+  width: 10%;
+  background-color: #3d224e;
+}
+.passwordArea_copyIcon img {
+  height: 100%;
+  width: 100%;
+  background-color: #3d224e;
+  cursor: pointer;
 }
 
-.form {
+.passwordSettings {
   height: 70%;
   width: 100%;
-  background-color: #141726;
+  background-color: #3d224e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.passwordSettings_options {
+  height: 90%;
+  width: 90%;
+  background-color: #3d224e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.passwordSettings_options_characterLength {
+  height: 15%;
+  width: 100%;
+  background-color: #3d224e;
+}
+.passwordSettings_options_characterLength_info {
+  height: 40%;
+  width: 100%;
+  background-color: #3d224e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.passwordSettings_options_characterLength_input {
+  height: 40%;
+  width: 100%;
+  background-color: #3d224e;
+}
+.passwordSettings_options_characterLength_input input[type=range] {
+  height: 100%;
+  width: 100%;
+  background-color: #8e4ec6;
+}
+.passwordSettings_options_checkboxs {
+  height: 40%;
+  width: 100%;
+  background-color: #3d224e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.passwordSettings_options_checkboxs div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.passwordSettings_options_checkboxs div input {
+  margin-right: 10px;
+}
+.passwordSettings_options_passwordStrengthInfo {
+  padding: 0 5%;
+  height: 15%;
+  width: 90%;
+  background-color: #18111b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.passwordSettings_options_generateButton {
+  height: 15%;
+  width: 100%;
+  background-color: #8e4ec6;
+}
+.passwordSettings_options_generateButton button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #8e4ec6;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+}
+.passwordSettings_options_generateButton button:hover {
+  background-color: #9a5cd0;
 }
 
 /*# sourceMappingURL=style.css.map */
