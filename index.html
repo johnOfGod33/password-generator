@@ -18,8 +18,23 @@
         </div>
         <form class="form">
           <div>
-            <input type="checkbox" />
-            <label for="">Include Uppercase</label>
+            <div>
+              <div>Character length</div>
+              <div class="characterValue"></div>
+            </div>
+            <div>
+              <input
+                type="range"
+                id="characterRange"
+                min="0"
+                max="20"
+                step="1"
+              />
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">Include Uppercase</label>
           </div>
           <div>
             <input type="checkbox" />
@@ -38,5 +53,6 @@
         </form>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
