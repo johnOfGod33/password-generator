@@ -71,7 +71,7 @@ main {
   @include flexBox(center, center);
 }
 .container {
-  @include sizeBox(80vh, 30vw, $bgc);
+  @include sizeBox(75vh, 30vw, $bgc);
   @include flexBox(space-between, center, column);
 }
 
@@ -108,7 +108,8 @@ main {
     @include flexBox(space-between, flex-start, column);
 
     &_characterLength {
-      @include sizeBox(15%, 100%, $componentbgc);
+      @include sizeBox(20%, 100%, $componentbgc);
+      @include flexBox(space-between, flex-start, column);
 
       &_info {
         @include sizeBox(40%, 100%, $componentbgc);
@@ -117,8 +118,34 @@ main {
 
       &_input {
         @include sizeBox(40%, 100%, $componentbgc);
+
         input[type="range"] {
-          @include sizeBox(100%, 100%, $buttonbgc);
+          appearance: none;
+          -webkit-appearance: none;
+          background-color: transparent;
+          cursor: pointer;
+          width: 100%;
+
+          &::-webkit-slider-runnable-track {
+            height: 40%;
+            width: 100%;
+            background-color: $buttonbgc;
+          }
+
+          &::-moz-range-track {
+            height: 50%;
+            width: 100%;
+            background-color: $buttonbgc;
+          }
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            margin-top: -6px;
+            background-color: #fff;
+          }
         }
       }
     }
@@ -127,10 +154,64 @@ main {
       @include sizeBox(40%, 100%, $componentbgc);
       @include flexBox(space-between, flex-start, column);
 
-      div {
-        @include flexBox(space-between, center);
+      &_container {
+        position: relative;
+        @include sizeBox(18%, 45%, $componentbgc);
+        @include flexBox(flex-start, center);
+
+        padding-left: 25px;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -moz-user-select: none;
+        cursor: pointer;
+
         input {
-          margin-right: 10px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          height: 0;
+          width: 0;
+        }
+
+        &_checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include sizeBox(15px, 15px, $componentbgc);
+          border: 2px solid white;
+        }
+
+        &:hover input ~ &_checkmark {
+          background-color: $bgc;
+        }
+
+        &_checkmark::after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        & input:checked ~ &_checkmark {
+          background-color: $buttonbgc;
+        }
+
+        & input:checked ~ &_checkmark::after {
+          display: block;
+        }
+
+        &_checkmark::after {
+          left: 5px;
+          top: 1px;
+          width: 4px;
+          height: 8px;
+          border: solid white;
+          border-width: 0 2.8px 2.8px 0;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
         }
       }
     }
