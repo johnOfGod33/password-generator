@@ -122,23 +122,23 @@ main {
         input[type="range"] {
           appearance: none;
           -webkit-appearance: none;
-          background-color: transparent;
+
+          outline: none;
           cursor: pointer;
+          height: 20%;
           width: 100%;
-
-          &::-webkit-slider-runnable-track {
-            height: 40%;
-            width: 100%;
-            background-color: $buttonbgc;
-          }
-
-          &::-moz-range-track {
-            height: 50%;
-            width: 100%;
-            background-color: $buttonbgc;
-          }
+          background: $bgc;
+          transition: all 300ms;
 
           &::-webkit-slider-thumb {
+            appearance: none;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: #fff;
+          }
+
+          &::-moz-range-thumb {
             appearance: none;
             height: 15px;
             width: 15px;
