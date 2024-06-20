@@ -9,16 +9,22 @@ const passwordStrengthName = document.querySelector(
 const strengthList = {
   1: { name: "WEAK", color: "red" },
   2: { name: "MEDIUM", color: "orange" },
-  3: { name: "STRONG", color: "green" },
-  4: { name: "VERY STRONG", color: "gold" },
+  3: { name: "STRONG", color: "blue" },
+  4: { name: "VERY STRONG", color: "green" },
 };
 
-const stylePasswordChart = (n) => {
-  passwordStrengthName.textContent = strengthList[n].name;
+const resetChartStyle = () => {
+  passwordStrengthName.textContent = "VERY WEAK";
 
-  for (let i = 0; i < n; i++) {
-    passwordStrengthChart[i].style.backgroundColor = strengthList[n].color;
+  for (let i = 0; i < 4; i++) {
+    passwordStrengthChart[i].style.backgroundColor = "#18111b";
   }
 };
 
-stylePasswordChart(3);
+const stylePasswordChart = (score) => {
+  passwordStrengthName.textContent = strengthList[score].name;
+
+  for (let i = 0; i < score; i++) {
+    passwordStrengthChart[i].style.backgroundColor = strengthList[score].color;
+  }
+};

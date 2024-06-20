@@ -13,7 +13,7 @@
           <h5>Password Generator</h5>
         </div>
         <div class="passwordArea">
-          <div class="passwordArea_password">ighrhruhuirereui</div>
+          <div class="passwordArea_password"></div>
           <div class="passwordArea_copyIcon">
             <img src="../assets/copy-regular.svg" alt="copy" />
           </div>
@@ -81,7 +81,7 @@
                 <div
                   class="passwordSettings_options_passwordStrength_info_name"
                 >
-                  WEAK
+                  VERY WEAK
                 </div>
                 <div
                   class="passwordSettings_options_passwordStrength_info_chart"
@@ -108,8 +108,10 @@
         </div>
       </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <script src="../Scripts/styleCharacterLengthInput.js"></script>
     <script src="../Scripts/stylePasswordStrengthChart.js"></script>
     <script src="../Scripts/generatePassword.js"></script>
+    <script src="../Scripts/handleGenerateButton.js"></script>
   </body>
 </html>
