@@ -33,6 +33,16 @@
             </div>
             <div class="passwordSettings_options_checkboxs">
               <label
+                for="lowercase_checkbox"
+                class="passwordSettings_options_checkboxs_container"
+              >
+                <input type="checkbox" id="lowercase_checkbox" checked />
+                <span
+                  class="passwordSettings_options_checkboxs_container_checkmark"
+                ></span>
+                Include Lowercase
+              </label>
+              <label
                 for="uppercase_checkbox"
                 class="passwordSettings_options_checkboxs_container"
               >
@@ -41,17 +51,6 @@
                   class="passwordSettings_options_checkboxs_container_checkmark"
                 ></span>
                 Include Uppercase
-              </label>
-
-              <label
-                for="lowercase_checkbox"
-                class="passwordSettings_options_checkboxs_container"
-              >
-                <input type="checkbox" id="lowercase_checkbox" />
-                <span
-                  class="passwordSettings_options_checkboxs_container_checkmark"
-                ></span>
-                Include Lowercase
               </label>
 
               <label
@@ -109,8 +108,8 @@
         </div>
       </div>
     </main>
-    <script src="../Scripts/index.js"></script>
     <script src="../Scripts/styleCharacterLengthInput.js"></script>
     <script src="../Scripts/stylePasswordStrengthChart.js"></script>
+    <script src="../Scripts/generatePassword.js"></script>
   </body>
 </html>
