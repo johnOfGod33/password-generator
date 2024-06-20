@@ -238,7 +238,7 @@ main {
   -ms-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
 }
-.passwordSettings_options_passwordStrengthInfo {
+.passwordSettings_options_passwordStrength {
   padding: 0 5%;
   height: 15%;
   width: 90%;
@@ -247,6 +247,32 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 1rem;
+}
+.passwordSettings_options_passwordStrength_info {
+  height: 100%;
+  width: 60%;
+  background-color: #18111b;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.passwordSettings_options_passwordStrength_info_chart {
+  margin-left: 10px;
+  height: 50%;
+  width: 30%;
+  background-color: #18111b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.passwordSettings_options_passwordStrength_info_chart_div {
+  height: 100%;
+  width: 15%;
+  background-color: none;
+  border: 1.5px solid white;
 }
 .passwordSettings_options_generateButton {
   height: 15%;

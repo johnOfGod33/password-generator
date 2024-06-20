@@ -216,10 +216,27 @@ main {
       }
     }
 
-    &_passwordStrengthInfo {
+    &_passwordStrength {
       padding: 0 5%;
       @include sizeBox(15%, 90%, $bgc);
       @include flexBox(space-between, center);
+      font-size: 1rem;
+
+      &_info {
+        @include sizeBox(100%, 60%, $bgc);
+        @include flexBox(flex-end, center);
+
+        &_chart {
+          margin-left: 10px;
+          @include sizeBox(50%, 30%, $bgc);
+          @include flexBox(space-between, center);
+
+          &_div {
+            @include sizeBox(100%, 15%, none);
+            border: 1.5px solid white;
+          }
+        }
+      }
     }
 
     &_generateButton {
