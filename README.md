@@ -4,9 +4,9 @@ Get your strong password now !
 
 ![alt text](assets/passwordGenerator.PNG)
 
-# Live Demo
+# Demo
 
-not yet
+You can test it [here](https://johnofgod33.github.io/password-generator/)
 
 # How does it work ?
 
