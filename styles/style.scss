@@ -46,7 +46,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.333rem; /* 21.28px */
+  font-size: 1rem; /* 21.28px */
 }
 
 small {
@@ -83,17 +83,27 @@ main {
 .passwordArea {
   @include sizeBox(10%, 100%, $componentbgc);
   @include flexBox(space-around, center);
+  color: $passwordColor;
   &_password {
-    @include sizeBox(80%, 80%, $componentbgc);
+    @include sizeBox(80%, 70%, $componentbgc);
     @include flexBox(flex-start, center);
     font-weight: bold;
     font-size: 1.2rem;
-    color: $passwordColor;
   }
   &_copyIcon {
-    @include sizeBox(50%, 10%, $componentbgc);
+    @include sizeBox(50%, 25%, $componentbgc);
+    @include flexBox(center, center);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: none;
+    &_message {
+      opacity: 0;
+      @include flexBox(center, center);
+    }
     img {
-      @include sizeBox(100%, 100%, $componentbgc);
+      @include sizeBox(100%, 80%, $componentbgc);
+      margin-left: 8px;
       cursor: pointer;
     }
   }

@@ -37,7 +37,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.333rem; /* 21.28px */
+  font-size: 1rem; /* 21.28px */
 }
 
 small {
@@ -79,10 +79,11 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  color: #d6e1ff;
 }
 .passwordArea_password {
   height: 80%;
-  width: 80%;
+  width: 70%;
   background-color: #3d224e;
   display: flex;
   flex-direction: row;
@@ -90,17 +91,32 @@ main {
   align-items: center;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #d6e1ff;
 }
 .passwordArea_copyIcon {
   height: 50%;
-  width: 10%;
+  width: 25%;
   background-color: #3d224e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
+}
+.passwordArea_copyIcon_message {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .passwordArea_copyIcon img {
   height: 100%;
-  width: 100%;
+  width: 80%;
   background-color: #3d224e;
+  margin-left: 8px;
   cursor: pointer;
 }
 

@@ -25,6 +25,7 @@ const handleGenerateButton = () => {
   passwordArea.textContent = password;
 
   resetChartStyle();
+  hideCopyMessage();
 
   if (score > 0) {
     stylePasswordChart(score);

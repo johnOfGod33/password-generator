@@ -8,8 +8,8 @@ const passwordStrengthName = document.querySelector(
 
 const strengthList = {
   1: { name: "WEAK", color: "red" },
-  2: { name: "MEDIUM", color: "orange" },
-  3: { name: "STRONG", color: "blue" },
+  2: { name: "MEDIUM", color: "yellow" },
+  3: { name: "STRONG", color: "orange" },
   4: { name: "VERY STRONG", color: "green" },
 };
 
