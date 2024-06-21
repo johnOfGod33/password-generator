@@ -268,25 +268,34 @@ main {
   }
 }
 
-@mixin responsiveBox($minWidth, $maxWidth, $containerWidth, $containerHeight) {
+@mixin responsiveBox(
+  $minWidth,
+  $maxWidth,
+  $containerWidth,
+  $containerHeight,
+  $fontSize
+) {
   @media (min-width: $minWidth) and (max-width: $maxWidth) {
     .container {
       height: $containerHeight;
       width: $containerWidth;
     }
+    html {
+      font-size: $fontSize;
+    }
   }
 }
 
-@include responsiveBox(350px, 450px, 95vw, 85vh);
+@include responsiveBox(350px, 450px, 65vw, 65vh, 50%);
 
-@include responsiveBox(450px, 500px, 85vw, 85vh);
+@include responsiveBox(450px, 500px, 60vw, 65vh, 60%);
 
-@include responsiveBox(500px, 650px, 80vw, 85vh);
+@include responsiveBox(500px, 650px, 58vw, 65vh, 70%);
 
-@include responsiveBox(650px, 800px, 60vw, 85vh);
+@include responsiveBox(650px, 800px, 50vw, 70vh, 70%);
 
-@include responsiveBox(800px, 900px, 45vw, 85vh);
+@include responsiveBox(800px, 900px, 40vw, 70vh, 70%);
 
-@include responsiveBox(900px, 1000px, 45vw, 85vh);
+@include responsiveBox(900px, 1000px, 35vw, 70vh, 70%);
 
-@include responsiveBox(1025px, 1075px, 35vw, 80vh);
+@include responsiveBox(1025px, 1075px, 35vw, 80vh, 80%);

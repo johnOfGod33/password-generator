@@ -316,44 +316,65 @@ main {
 
 @media (min-width: 350px) and (max-width: 450px) {
   .container {
-    height: 85vh;
-    width: 95vw;
+    height: 65vh;
+    width: 65vw;
+  }
+  html {
+    font-size: 50%;
   }
 }
 @media (min-width: 450px) and (max-width: 500px) {
   .container {
-    height: 85vh;
-    width: 85vw;
+    height: 65vh;
+    width: 60vw;
+  }
+  html {
+    font-size: 60%;
   }
 }
 @media (min-width: 500px) and (max-width: 650px) {
   .container {
-    height: 85vh;
-    width: 80vw;
+    height: 65vh;
+    width: 58vw;
+  }
+  html {
+    font-size: 70%;
   }
 }
 @media (min-width: 650px) and (max-width: 800px) {
   .container {
-    height: 85vh;
-    width: 60vw;
+    height: 70vh;
+    width: 50vw;
+  }
+  html {
+    font-size: 70%;
   }
 }
 @media (min-width: 800px) and (max-width: 900px) {
   .container {
-    height: 85vh;
-    width: 45vw;
+    height: 70vh;
+    width: 40vw;
+  }
+  html {
+    font-size: 70%;
   }
 }
 @media (min-width: 900px) and (max-width: 1000px) {
   .container {
-    height: 85vh;
-    width: 45vw;
+    height: 70vh;
+    width: 35vw;
+  }
+  html {
+    font-size: 70%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1075px) {
   .container {
     height: 80vh;
     width: 35vw;
+  }
+  html {
+    font-size: 80%;
   }
 }
 
