@@ -314,4 +314,47 @@ main {
   background-color: #9a5cd0;
 }
 
+@media (min-width: 350px) and (max-width: 450px) {
+  .container {
+    height: 85vh;
+    width: 95vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 500px) {
+  .container {
+    height: 85vh;
+    width: 85vw;
+  }
+}
+@media (min-width: 500px) and (max-width: 650px) {
+  .container {
+    height: 85vh;
+    width: 80vw;
+  }
+}
+@media (min-width: 650px) and (max-width: 800px) {
+  .container {
+    height: 85vh;
+    width: 60vw;
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .container {
+    height: 85vh;
+    width: 45vw;
+  }
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+  .container {
+    height: 85vh;
+    width: 45vw;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1075px) {
+  .container {
+    height: 80vh;
+    width: 35vw;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

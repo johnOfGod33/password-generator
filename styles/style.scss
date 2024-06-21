@@ -267,3 +267,26 @@ main {
     }
   }
 }
+
+@mixin responsiveBox($minWidth, $maxWidth, $containerWidth, $containerHeight) {
+  @media (min-width: $minWidth) and (max-width: $maxWidth) {
+    .container {
+      height: $containerHeight;
+      width: $containerWidth;
+    }
+  }
+}
+
+@include responsiveBox(350px, 450px, 95vw, 85vh);
+
+@include responsiveBox(450px, 500px, 85vw, 85vh);
+
+@include responsiveBox(500px, 650px, 80vw, 85vh);
+
+@include responsiveBox(650px, 800px, 60vw, 85vh);
+
+@include responsiveBox(800px, 900px, 45vw, 85vh);
+
+@include responsiveBox(900px, 1000px, 45vw, 85vh);
+
+@include responsiveBox(1025px, 1075px, 35vw, 80vh);
