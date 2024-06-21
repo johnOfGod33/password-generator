@@ -1,43 +1,26 @@
 # PASSWORD GENERATOR
 
-this website will generate a ramdom password.
+Get your strong password now !
 
-Depending on the chosen criteria we'll have a weak, medium, strong and very strong
+![alt text](assets/passwordGenerator.PNG)
+
+# Live Demo
+
+not yet
+
+# How does it work ?
+
+choose the length of your password, include the different categories of your password and generate the password.
+
+you can also see the strength of password
 
 # FEATURES
 
 . Generate password
 
-1.  Weak
-
-    . Conditions
-
-        . Between 6 and 8 characters
-        . Uses only one category of characters (lowercase letters, uppercase letters, numbers, or symbols)
-
-2.  Medium
-
-    . Conditions
-
-        . Between 8 and 12 characters
-        . Uses at least two
-        categories of characters (e.g., uppercase letters and numbers)
-
-3.  Strong
-
-    . Conditions
-
-        . Between 12 and 16 characters
-        . Uses at least three categories of characters (lowercase letters, uppercase letters, numbers, or symbols)
-
-4.  Very Strong
-
-    . Conditions
-
-        .More than 16 characters
-        .Uses all categories of characters (lowercase letters, uppercase letters, numbers, symbols)
-
 . Copy the password generated
+
+. Meseaure password strength with zxcvbn library
 
 # TECH
 
