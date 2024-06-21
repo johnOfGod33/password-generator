@@ -80,6 +80,10 @@ main {
   justify-content: space-around;
   align-items: center;
   color: #d6e1ff;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
 }
 .passwordArea_password {
   height: 80%;
@@ -100,10 +104,6 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -moz-user-select: none;
 }
 .passwordArea_copyIcon_message {
   opacity: 0;
@@ -308,6 +308,7 @@ main {
   cursor: pointer;
   color: white;
   font-size: 1.2rem;
+  font-weight: 500;
 }
 .passwordSettings_options_generateButton button:hover {
   background-color: #9a5cd0;

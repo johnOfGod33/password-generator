@@ -37,7 +37,12 @@
                 for="lowercase_checkbox"
                 class="passwordSettings_options_checkboxs_container"
               >
-                <input type="checkbox" id="lowercase_checkbox" checked />
+                <input
+                  type="checkbox"
+                  id="lowercase_checkbox"
+                  name="checkbox"
+                  checked
+                />
                 <span
                   class="passwordSettings_options_checkboxs_container_checkmark"
                 ></span>
@@ -47,7 +52,11 @@
                 for="uppercase_checkbox"
                 class="passwordSettings_options_checkboxs_container"
               >
-                <input type="checkbox" id="uppercase_checkbox" />
+                <input
+                  type="checkbox"
+                  id="uppercase_checkbox"
+                  name="checkbox"
+                />
                 <span
                   class="passwordSettings_options_checkboxs_container_checkmark"
                 ></span>
@@ -58,7 +67,7 @@
                 for="numbers_checkbox"
                 class="passwordSettings_options_checkboxs_container"
               >
-                <input type="checkbox" id="numbers_checkbox" />
+                <input type="checkbox" id="numbers_checkbox" name="checkbox" />
                 <span
                   class="passwordSettings_options_checkboxs_container_checkmark"
                 ></span>
@@ -69,7 +78,7 @@
                 for="symbols_checkbox"
                 class="passwordSettings_options_checkboxs_container"
               >
-                <input type="checkbox" id="symbols_checkbox" />
+                <input type="checkbox" id="symbols_checkbox" name="checkbox" />
                 <span
                   class="passwordSettings_options_checkboxs_container_checkmark"
                 ></span>
@@ -103,7 +112,7 @@
               </div>
             </div>
             <div class="passwordSettings_options_generateButton">
-              <button>Generate</button>
+              <button>Generate Password</button>
             </div>
           </div>
         </div>
@@ -115,5 +124,6 @@
     <script src="../Scripts/generatePassword.js"></script>
     <script src="../Scripts/handleGenerateButton.js"></script>
     <script src="../Scripts/copyPassword.js"></script>
+    <script src="../Scripts/handleCheckboxInput.js"></script>
   </body>
 </html>
