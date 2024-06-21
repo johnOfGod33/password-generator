@@ -168,7 +168,6 @@ main {
         position: relative;
         @include sizeBox(18%, 45%, $componentbgc);
         @include flexBox(flex-start, center);
-
         padding-left: 25px;
         user-select: none;
         -webkit-user-select: none;
@@ -189,7 +188,7 @@ main {
           position: absolute;
           top: 0;
           left: 0;
-          @include sizeBox(15px, 15px, $componentbgc);
+          @include sizeBox(90%, 9%, $componentbgc);
           border: 2px solid white;
         }
 
@@ -212,10 +211,10 @@ main {
         }
 
         &_checkmark::after {
-          left: 5px;
-          top: 1px;
-          width: 4px;
-          height: 8px;
+          left: 28%;
+          top: 10%;
+          width: 30%;
+          height: 50%;
           border: solid white;
           border-width: 0 2.8px 2.8px 0;
           transform: rotate(45deg);
@@ -268,14 +267,8 @@ main {
   }
 }
 
-@mixin responsiveBox(
-  $minWidth,
-  $maxWidth,
-  $containerWidth,
-  $containerHeight,
-  $fontSize
-) {
-  @media (min-width: $minWidth) and (max-width: $maxWidth) {
+@mixin responsiveBox($width, $containerHeight, $containerWidth, $fontSize) {
+  @media (width: $width) {
     .container {
       height: $containerHeight;
       width: $containerWidth;
@@ -286,16 +279,14 @@ main {
   }
 }
 
-@include responsiveBox(350px, 450px, 65vw, 65vh, 50%);
+@include responsiveBox(320px, 50vh, 70vw, 50%);
 
-@include responsiveBox(450px, 500px, 60vw, 65vh, 60%);
+@include responsiveBox(375px, 50vh, 65vw, 50%);
 
-@include responsiveBox(500px, 650px, 58vw, 65vh, 70%);
+@include responsiveBox(425px, 50vh, 60vw, 50%);
 
-@include responsiveBox(650px, 800px, 50vw, 70vh, 70%);
+@include responsiveBox(768px, 65vh, 40vw, 70%);
 
-@include responsiveBox(800px, 900px, 40vw, 70vh, 70%);
+@include responsiveBox(1024px, 70vh, 30vw, 70%);
 
-@include responsiveBox(900px, 1000px, 35vw, 70vh, 70%);
-
-@include responsiveBox(1025px, 1075px, 35vw, 80vh, 80%);
+@include responsiveBox(1440px, 65vh, 30vw, 90%);
