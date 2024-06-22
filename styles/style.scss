@@ -172,7 +172,9 @@ main {
 
       &_container {
         position: relative;
-        @include sizeBox(18%, 50%, $componentbgc);
+        height: 17%;
+        min-width: 50%;
+        max-width: 100%;
         @include flexBox(flex-start, center);
 
         padding-left: 25px;
@@ -244,7 +246,9 @@ main {
 
         &_chart {
           margin-left: 10px;
-          @include sizeBox(50%, 30%, $bgc);
+          height: 50%;
+          min-width: 30%;
+          max-width: 50%;
           @include flexBox(space-between, center);
 
           &_div {
