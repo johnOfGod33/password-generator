@@ -77,7 +77,6 @@ main {
 .container {
   @include sizeBox(70%, 30%, $bgc);
   @include flexBox(center, center, column);
-  border: 1px solid black;
 }
 
 .title {
@@ -175,7 +174,6 @@ main {
         position: relative;
         @include sizeBox(18%, 50%, $componentbgc);
         @include flexBox(flex-start, center);
-        border: 1px solid black;
 
         padding-left: 25px;
         user-select: none;
