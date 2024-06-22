@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:700|Lucida%20Console:400");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Lucida Console";
   font-weight: 400;
@@ -13,12 +19,10 @@ h4,
 h5 {
   font-family: "Ubuntu";
   font-weight: 700;
-  margin: 0;
-  padding: 0;
 }
 
 html {
-  font-size: 90%;
+  font-size: clamp(10px, 1vw, 14px);
 } /* 16px */
 h1 {
   font-size: 4.21rem; /* 67.36px */
@@ -55,19 +59,21 @@ main {
 }
 
 .container {
-  height: 75vh;
-  width: 30vw;
+  height: 70%;
+  width: 30%;
   background-color: #18111b;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
 .title {
   height: 5%;
   width: 100%;
   background-color: #18111b;
+  margin-bottom: 2vh;
   text-align: center;
 }
 
@@ -79,6 +85,7 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 3vh;
   color: #d6e1ff;
   user-select: none;
   -webkit-user-select: none;
@@ -198,12 +205,13 @@ main {
 .passwordSettings_options_checkboxs_container {
   position: relative;
   height: 18%;
-  width: 45%;
+  width: 50%;
   background-color: #3d224e;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  border: 1px solid black;
   padding-left: 25px;
   user-select: none;
   -webkit-user-select: none;
@@ -223,8 +231,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  height: 90%;
-  width: 9%;
+  height: 100%;
+  width: 10%;
   background-color: #3d224e;
   border: 2px solid white;
 }
@@ -257,7 +265,7 @@ main {
 .passwordSettings_options_passwordStrength {
   padding: 0 5%;
   height: 15%;
-  width: 90%;
+  width: 100%;
   background-color: #18111b;
   display: flex;
   flex-direction: row;
@@ -314,58 +322,34 @@ main {
   background-color: #9a5cd0;
 }
 
-@media (width: 320px) {
+@media only screen and (max-width: 600px) {
   .container {
-    height: 50vh;
-    width: 70vw;
-  }
-  html {
-    font-size: 50%;
+    height: 60%;
+    width: 60%;
   }
 }
-@media (width: 375px) {
+@media only screen and (min-width: 600px) {
   .container {
-    height: 50vh;
-    width: 65vw;
-  }
-  html {
-    font-size: 50%;
+    height: 50%;
+    width: 50%;
   }
 }
-@media (width: 425px) {
+@media only screen and (min-width: 768px) {
   .container {
-    height: 50vh;
-    width: 60vw;
-  }
-  html {
-    font-size: 50%;
+    height: 60%;
+    width: 50%;
   }
 }
-@media (width: 768px) {
+@media only screen and (min-width: 992px) {
   .container {
-    height: 65vh;
-    width: 40vw;
-  }
-  html {
-    font-size: 70%;
+    height: 60%;
+    width: 35%;
   }
 }
-@media (width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .container {
-    height: 70vh;
-    width: 30vw;
-  }
-  html {
-    font-size: 70%;
-  }
-}
-@media (width: 1440px) {
-  .container {
-    height: 65vh;
-    width: 30vw;
-  }
-  html {
-    font-size: 90%;
+    height: 70%;
+    width: 30%;
   }
 }
 

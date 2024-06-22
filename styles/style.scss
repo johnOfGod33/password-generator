@@ -7,6 +7,11 @@ $passwordColor: #d6e1ff;
 
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:700|Lucida%20Console:400");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Lucida Console";
   font-weight: 400;
@@ -21,12 +26,10 @@ h4,
 h5 {
   font-family: "Ubuntu";
   font-weight: 700;
-  margin: 0;
-  padding: 0;
 }
 
 html {
-  font-size: 90%;
+  font-size: clamp(10px, 1vw, 14px);
 } /* 16px */
 
 h1 {
@@ -70,19 +73,23 @@ main {
   @include sizeBox(100vh, 100%, $bgc);
   @include flexBox(center, center);
 }
+
 .container {
-  @include sizeBox(75vh, 30vw, $bgc);
-  @include flexBox(space-between, center, column);
+  @include sizeBox(70%, 30%, $bgc);
+  @include flexBox(center, center, column);
+  border: 1px solid black;
 }
 
 .title {
   @include sizeBox(5%, 100%, $bgc);
+  margin-bottom: 2vh;
   text-align: center;
 }
 
 .passwordArea {
   @include sizeBox(10%, 100%, $componentbgc);
   @include flexBox(space-around, center);
+  margin-bottom: 3vh;
   color: $passwordColor;
   user-select: none;
   -webkit-user-select: none;
@@ -166,8 +173,10 @@ main {
 
       &_container {
         position: relative;
-        @include sizeBox(18%, 45%, $componentbgc);
+        @include sizeBox(18%, 50%, $componentbgc);
         @include flexBox(flex-start, center);
+        border: 1px solid black;
+
         padding-left: 25px;
         user-select: none;
         -webkit-user-select: none;
@@ -188,7 +197,7 @@ main {
           position: absolute;
           top: 0;
           left: 0;
-          @include sizeBox(90%, 9%, $componentbgc);
+          @include sizeBox(100%, 10%, $componentbgc);
           border: 2px solid white;
         }
 
@@ -227,7 +236,7 @@ main {
 
     &_passwordStrength {
       padding: 0 5%;
-      @include sizeBox(15%, 90%, $bgc);
+      @include sizeBox(15%, 100%, $bgc);
       @include flexBox(space-between, center);
       font-size: 1rem;
 
@@ -267,26 +276,37 @@ main {
   }
 }
 
-@mixin responsiveBox($width, $containerHeight, $containerWidth, $fontSize) {
-  @media (width: $width) {
-    .container {
-      height: $containerHeight;
-      width: $containerWidth;
-    }
-    html {
-      font-size: $fontSize;
-    }
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 60%;
+    width: 60%;
   }
 }
 
-@include responsiveBox(320px, 50vh, 70vw, 50%);
+@media only screen and (min-width: 600px) {
+  .container {
+    height: 50%;
+    width: 50%;
+  }
+}
 
-@include responsiveBox(375px, 50vh, 65vw, 50%);
+@media only screen and (min-width: 768px) {
+  .container {
+    height: 60%;
+    width: 50%;
+  }
+}
 
-@include responsiveBox(425px, 50vh, 60vw, 50%);
+@media only screen and (min-width: 992px) {
+  .container {
+    height: 60%;
+    width: 35%;
+  }
+}
 
-@include responsiveBox(768px, 65vh, 40vw, 70%);
-
-@include responsiveBox(1024px, 70vh, 30vw, 70%);
-
-@include responsiveBox(1440px, 65vh, 30vw, 90%);
+@media only screen and (min-width: 1200px) {
+  .container {
+    height: 70%;
+    width: 30%;
+  }
+}
