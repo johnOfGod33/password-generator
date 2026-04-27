@@ -4,121 +4,266 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google" content="notranslate" />
+    <meta name="description" content="Generate strong, secure passwords instantly. Customizable length, character types, and real-time strength analysis." />
     <title>Password Generator</title>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <main>
-      <div class="container">
-        <div class="title">
-          <h5>Password Generator</h5>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav__brand">
+        <svg class="nav__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+        </svg>
+        PassGen
+      </div>
+      <a href="#generator" class="nav__cta">Generate Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__bg-glow hero__bg-glow--left"></div>
+      <div class="hero__bg-glow hero__bg-glow--right"></div>
+      <div class="hero__content">
+        <div class="hero__badge">Free &amp; Open Source</div>
+        <h1 class="hero__headline">
+          Passwords that<br/>
+          <span class="hero__headline--accent">hackers hate.</span>
+        </h1>
+        <p class="hero__sub">
+          Generate cryptographically strong passwords in seconds.
+          Fully customizable — length, characters, complexity — with
+          real-time strength analysis powered by zxcvbn.
+        </p>
+        <div class="hero__actions">
+          <a href="#generator" class="btn btn--primary">Generate a Password</a>
+          <a href="#features" class="btn btn--ghost">See Features</a>
         </div>
-        <div class="passwordArea">
-          <div class="passwordArea_password"></div>
-          <div class="passwordArea_copyIcon">
-            <div class="passwordArea_copyIcon_message">copied!</div>
-            <img src="./assets/copy-regular.svg" alt="copy" />
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">10<sup>30</sup></span>
+            <span class="hero__stat-label">Possible combinations</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">0</span>
+            <span class="hero__stat-label">Data stored or sent</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">100%</span>
+            <span class="hero__stat-label">Client-side only</span>
           </div>
         </div>
-        <div class="passwordSettings">
-          <div class="passwordSettings_options">
-            <div class="passwordSettings_options_characterLength">
-              <div class="passwordSettings_options_characterLength_info">
-                <div>Password Length</div>
-                <div
-                  class="passwordSettings_options_characterLength_info_value"
-                ></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__preview">
+          <div class="hero__preview-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="hero__preview-body">
+            <div class="hero__preview-label">Generated Password</div>
+            <div class="hero__preview-password">X@7kP#mQ2!nR</div>
+            <div class="hero__preview-meter">
+              <div class="hero__preview-bar-label">STRENGTH</div>
+              <div class="hero__preview-bars">
+                <div class="hero__preview-seg hero__preview-seg--on hero__preview-seg--green"></div>
+                <div class="hero__preview-seg hero__preview-seg--on hero__preview-seg--green"></div>
+                <div class="hero__preview-seg hero__preview-seg--on hero__preview-seg--green"></div>
+                <div class="hero__preview-seg hero__preview-seg--on hero__preview-seg--green"></div>
               </div>
-              <div class="passwordSettings_options_characterLength_input">
-                <input type="range" min="0" max="20" step="1" value="6" />
-              </div>
-            </div>
-            <div class="passwordSettings_options_checkboxs">
-              <label
-                for="lowercase_checkbox"
-                class="passwordSettings_options_checkboxs_container"
-              >
-                <input
-                  type="checkbox"
-                  id="lowercase_checkbox"
-                  name="checkbox"
-                  checked
-                />
-                <span
-                  class="passwordSettings_options_checkboxs_container_checkmark"
-                ></span>
-                Include Lowercase
-              </label>
-              <label
-                for="uppercase_checkbox"
-                class="passwordSettings_options_checkboxs_container"
-              >
-                <input
-                  type="checkbox"
-                  id="uppercase_checkbox"
-                  name="checkbox"
-                />
-                <span
-                  class="passwordSettings_options_checkboxs_container_checkmark"
-                ></span>
-                Include Uppercase
-              </label>
-
-              <label
-                for="numbers_checkbox"
-                class="passwordSettings_options_checkboxs_container"
-              >
-                <input type="checkbox" id="numbers_checkbox" name="checkbox" />
-                <span
-                  class="passwordSettings_options_checkboxs_container_checkmark"
-                ></span>
-                Include Numbers
-              </label>
-
-              <label
-                for="symbols_checkbox"
-                class="passwordSettings_options_checkboxs_container"
-              >
-                <input type="checkbox" id="symbols_checkbox" name="checkbox" />
-                <span
-                  class="passwordSettings_options_checkboxs_container_checkmark"
-                ></span>
-                Include Symbols
-              </label>
-            </div>
-            <div class="passwordSettings_options_passwordStrength">
-              <div>STRENGTH</div>
-              <div class="passwordSettings_options_passwordStrength_info">
-                <div
-                  class="passwordSettings_options_passwordStrength_info_name"
-                >
-                  VERY WEAK
-                </div>
-                <div
-                  class="passwordSettings_options_passwordStrength_info_chart"
-                >
-                  <div
-                    class="passwordSettings_options_passwordStrength_info_chart_div"
-                  ></div>
-                  <div
-                    class="passwordSettings_options_passwordStrength_info_chart_div"
-                  ></div>
-                  <div
-                    class="passwordSettings_options_passwordStrength_info_chart_div"
-                  ></div>
-                  <div
-                    class="passwordSettings_options_passwordStrength_info_chart_div"
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div class="passwordSettings_options_generateButton">
-              <button>Generate Password</button>
+              <span class="hero__preview-strength-label">VERY STRONG</span>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="features__inner">
+        <h2 class="features__heading">Everything you need in a password tool</h2>
+        <p class="features__sub">Simple by design. Powerful under the hood.</p>
+        <div class="features__grid">
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Fully Customizable</h3>
+            <p class="feature-card__desc">
+              Choose password length up to 20 characters. Toggle uppercase, lowercase,
+              numbers, and symbols independently to match any site's requirements.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Strength Analysis</h3>
+            <p class="feature-card__desc">
+              Every password is scored in real time by zxcvbn, the industry-standard
+              strength estimator used by Dropbox and others. No guesswork.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">100% Private</h3>
+            <p class="feature-card__desc">
+              Everything runs in your browser. No passwords are ever transmitted,
+              logged, or stored. What you generate stays with you.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">One-Click Copy</h3>
+            <p class="feature-card__desc">
+              Instantly copy your password to clipboard with one click.
+              A confirmation message lets you know it's ready to paste.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Instant Generation</h3>
+            <p class="feature-card__desc">
+              No loading, no waiting. Passwords are generated the moment you click —
+              using a cryptographically random character pool.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Always Safe Defaults</h3>
+            <p class="feature-card__desc">
+              At least one character type must always be selected, so you never
+              accidentally generate an empty or invalid password.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section class="generator-section" id="generator">
+      <div class="generator-section__inner">
+        <h2 class="generator-section__heading">Try it now</h2>
+        <p class="generator-section__sub">Configure your options and hit Generate.</p>
+        <main>
+          <div class="container">
+            <div class="title">
+              <h5>Password Generator</h5>
+            </div>
+            <div class="passwordArea">
+              <div class="passwordArea_password"></div>
+              <div class="passwordArea_copyIcon">
+                <div class="passwordArea_copyIcon_message">copied!</div>
+                <img src="./assets/copy-regular.svg" alt="copy" />
+              </div>
+            </div>
+            <div class="passwordSettings">
+              <div class="passwordSettings_options">
+                <div class="passwordSettings_options_characterLength">
+                  <div class="passwordSettings_options_characterLength_info">
+                    <div>Password Length</div>
+                    <div class="passwordSettings_options_characterLength_info_value"></div>
+                  </div>
+                  <div class="passwordSettings_options_characterLength_input">
+                    <input type="range" min="0" max="20" step="1" value="6" />
+                  </div>
+                </div>
+                <div class="passwordSettings_options_checkboxs">
+                  <label for="lowercase_checkbox" class="passwordSettings_options_checkboxs_container">
+                    <input type="checkbox" id="lowercase_checkbox" name="checkbox" checked />
+                    <span class="passwordSettings_options_checkboxs_container_checkmark"></span>
+                    Include Lowercase
+                  </label>
+                  <label for="uppercase_checkbox" class="passwordSettings_options_checkboxs_container">
+                    <input type="checkbox" id="uppercase_checkbox" name="checkbox" />
+                    <span class="passwordSettings_options_checkboxs_container_checkmark"></span>
+                    Include Uppercase
+                  </label>
+                  <label for="numbers_checkbox" class="passwordSettings_options_checkboxs_container">
+                    <input type="checkbox" id="numbers_checkbox" name="checkbox" />
+                    <span class="passwordSettings_options_checkboxs_container_checkmark"></span>
+                    Include Numbers
+                  </label>
+                  <label for="symbols_checkbox" class="passwordSettings_options_checkboxs_container">
+                    <input type="checkbox" id="symbols_checkbox" name="checkbox" />
+                    <span class="passwordSettings_options_checkboxs_container_checkmark"></span>
+                    Include Symbols
+                  </label>
+                </div>
+                <div class="passwordSettings_options_passwordStrength">
+                  <div>STRENGTH</div>
+                  <div class="passwordSettings_options_passwordStrength_info">
+                    <div class="passwordSettings_options_passwordStrength_info_name">VERY WEAK</div>
+                    <div class="passwordSettings_options_passwordStrength_info_chart">
+                      <div class="passwordSettings_options_passwordStrength_info_chart_div"></div>
+                      <div class="passwordSettings_options_passwordStrength_info_chart_div"></div>
+                      <div class="passwordSettings_options_passwordStrength_info_chart_div"></div>
+                      <div class="passwordSettings_options_passwordStrength_info_chart_div"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="passwordSettings_options_generateButton">
+                  <button>Generate Password</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg class="nav__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+          PassGen
+        </div>
+        <p class="footer__copy">Built with &hearts; for security-conscious people.</p>
+        <p class="footer__note">All generation happens locally. No data ever leaves your device.</p>
+      </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <script src="./Scripts/styleCharacterLengthInput.js"></script>
     <script src="./Scripts/stylePasswordStrengthChart.js"></script>
