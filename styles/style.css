@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+html {
+  font-size: clamp(10px, 1vw, 14px);
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lucida Console";
   font-weight: 400;
@@ -21,37 +26,386 @@ h5 {
   font-weight: 700;
 }
 
-html {
-  font-size: clamp(10px, 1vw, 14px);
-} /* 16px */
 h1 {
-  font-size: 4.21rem; /* 67.36px */
+  font-size: 4.21rem;
 }
 
 h2 {
-  font-size: 3.158rem; /* 50.56px */
+  font-size: 3.158rem;
 }
 
 h3 {
-  font-size: 2.369rem; /* 37.92px */
+  font-size: 2.369rem;
 }
 
 h4 {
-  font-size: 1.777rem; /* 28.48px */
+  font-size: 1.777rem;
 }
 
 h5 {
-  font-size: 1rem; /* 21.28px */
+  font-size: 1rem;
 }
 
 small {
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 6%;
+  background-color: rgba(24, 17, 27, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(61, 34, 78, 0.6);
+}
+.nav__brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.nav__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #8e4ec6;
+}
+.nav__cta {
+  padding: 0.55rem 1.4rem;
+  background-color: #8e4ec6;
+  color: white;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: background-color 200ms, transform 150ms;
+}
+.nav__cta:hover {
+  background-color: #9a5cd0;
+  transform: translateY(-1px);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  padding: 10rem 6% 6rem;
+}
+.hero__bg-glow {
+  position: absolute;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  opacity: 0.22;
+}
+.hero__bg-glow--left {
+  background: #8e4ec6;
+  top: -10%;
+  left: -15%;
+}
+.hero__bg-glow--right {
+  background: #4a1a7a;
+  bottom: -10%;
+  right: -15%;
+}
+.hero__content {
+  position: relative;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.hero__badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background-color: rgba(142, 78, 198, 0.2);
+  border: 1px solid rgba(142, 78, 198, 0.5);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #d6e1ff;
+  letter-spacing: 0.04em;
+}
+.hero__headline {
+  font-size: clamp(2.8rem, 5vw, 4.21rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.hero__headline--accent {
+  color: #8e4ec6;
+}
+.hero__sub {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  line-height: 1.8;
+  color: #a89bc0;
+  max-width: 460px;
+}
+.hero__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero__stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.8rem;
+  padding-top: 0.8rem;
+  flex-wrap: wrap;
+}
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.hero__stat-value {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+}
+.hero__stat-value sup {
+  font-size: 0.7em;
+}
+.hero__stat-label {
+  font-size: 0.78rem;
+  color: #a89bc0;
+}
+.hero__stat-divider {
+  width: 1px;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.hero__visual {
+  position: relative;
+  flex-shrink: 0;
+}
+.hero__preview {
+  width: clamp(260px, 28vw, 380px);
+  background-color: #3d224e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(142, 78, 198, 0.2);
+}
+.hero__preview-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  padding: 0.8rem 1rem;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.hero__preview-bar span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.hero__preview-body {
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.hero__preview-label {
+  font-size: 0.75rem;
+  color: #a89bc0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hero__preview-password {
+  font-family: "Lucida Console";
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #d6e1ff;
+  letter-spacing: 0.06em;
+  word-break: break-all;
+}
+.hero__preview-meter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+.hero__preview-bar-label {
+  font-size: 0.7rem;
+  color: #a89bc0;
+  letter-spacing: 0.08em;
+}
+.hero__preview-bars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+.hero__preview-seg {
+  width: 22px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+.hero__preview-seg--on {
+  border-color: transparent;
+}
+.hero__preview-seg--green {
+  background-color: #4ade80;
+}
+.hero__preview-strength-label {
+  font-size: 0.75rem;
+  color: #4ade80;
+  font-family: "Ubuntu";
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border-radius: 8px;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 200ms, transform 150ms, border-color 200ms;
+  cursor: pointer;
+}
+.btn--primary {
+  background-color: #8e4ec6;
+  color: white;
+  border: 2px solid #8e4ec6;
+}
+.btn--primary:hover {
+  background-color: #9a5cd0;
+  border-color: #9a5cd0;
+  transform: translateY(-2px);
+}
+.btn--ghost {
+  background-color: transparent;
+  color: #d6e1ff;
+  border: 2px solid rgba(214, 225, 255, 0.25);
+}
+.btn--ghost:hover {
+  border-color: rgba(214, 225, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.features {
+  padding: 7rem 6%;
+  background-color: #150f18;
+}
+.features__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.features__heading {
+  font-size: clamp(1.8rem, 3vw, 3.158rem);
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+.features__sub {
+  text-align: center;
+  color: #a89bc0;
+  margin-bottom: 4rem;
+  font-size: 1rem;
+}
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.feature-card {
+  background-color: #3d224e;
+  border-radius: 12px;
+  padding: 2rem 1.6rem;
+  border: 1px solid rgba(142, 78, 198, 0.15);
+  transition: border-color 250ms, transform 250ms, box-shadow 250ms;
+}
+.feature-card:hover {
+  border-color: rgba(142, 78, 198, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.feature-card__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #8e4ec6;
+  margin-bottom: 1.2rem;
+}
+.feature-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.feature-card__title {
+  font-size: 1.15rem;
+  font-family: "Ubuntu";
+  margin-bottom: 0.6rem;
+}
+.feature-card__desc {
+  font-size: 0.85rem;
+  color: #a89bc0;
+  line-height: 1.75;
+}
+
+.generator-section {
+  padding: 7rem 6%;
+}
+.generator-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.generator-section__heading {
+  font-size: clamp(1.8rem, 3vw, 3.158rem);
+  text-align: center;
+}
+.generator-section__sub {
+  text-align: center;
+  color: #a89bc0;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
 }
 
 main {
-  height: 100vh;
   width: 100%;
-  background-color: #18111b;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -59,9 +413,10 @@ main {
 }
 
 .container {
-  height: 70%;
+  height: auto;
   width: 30%;
   background-color: #18111b;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +432,7 @@ main {
 }
 
 .passwordArea {
-  height: 10%;
+  height: 60px;
   width: 100%;
   background-color: #3d224e;
   display: flex;
@@ -88,7 +443,6 @@ main {
   color: #d6e1ff;
   user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -moz-user-select: none;
 }
 .passwordArea_password {
@@ -127,54 +481,49 @@ main {
 }
 
 .passwordSettings {
-  height: 70%;
   width: 100%;
   background-color: #3d224e;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .passwordSettings_options {
-  height: 90%;
   width: 90%;
-  background-color: #3d224e;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.4rem;
 }
 .passwordSettings_options_characterLength {
-  height: 20%;
   width: 100%;
-  background-color: #3d224e;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 0.8rem;
 }
 .passwordSettings_options_characterLength_info {
-  height: 40%;
   width: 100%;
-  background-color: #3d224e;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .passwordSettings_options_characterLength_input {
-  height: 40%;
   width: 100%;
-  background-color: #3d224e;
 }
 .passwordSettings_options_characterLength_input input[type=range] {
   appearance: none;
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
-  height: 20%;
+  height: 6px;
   width: 100%;
   background: #18111b;
+  border-radius: 3px;
   transition: all 300ms;
 }
 .passwordSettings_options_characterLength_input input[type=range]::-webkit-slider-thumb {
@@ -189,23 +538,18 @@ main {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  margin-top: -6px;
   background-color: #fff;
 }
 .passwordSettings_options_checkboxs {
-  height: 40%;
   width: 100%;
-  background-color: #3d224e;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 0.7rem;
 }
 .passwordSettings_options_checkboxs_container {
   position: relative;
-  height: 17%;
-  min-width: 50%;
-  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -214,8 +558,8 @@ main {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -moz-user-select: none;
   cursor: pointer;
+  min-height: 18px;
 }
 .passwordSettings_options_checkboxs_container input {
   position: absolute;
@@ -229,8 +573,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 10%;
+  width: 16px;
+  height: 16px;
   background-color: #3d224e;
   border: 2px solid white;
 }
@@ -258,13 +602,12 @@ main {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
 }
 .passwordSettings_options_passwordStrength {
   padding: 0 5%;
-  height: 15%;
   width: 100%;
   background-color: #18111b;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -274,7 +617,6 @@ main {
 .passwordSettings_options_passwordStrength_info {
   height: 100%;
   width: 60%;
-  background-color: #18111b;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -297,8 +639,8 @@ main {
   border: 1.5px solid white;
 }
 .passwordSettings_options_generateButton {
-  height: 15%;
   width: 100%;
+  height: 50px;
   background-color: #8e4ec6;
 }
 .passwordSettings_options_generateButton button {
@@ -306,8 +648,8 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background-color: #8e4ec6;
   outline: none;
   border: none;
@@ -315,46 +657,100 @@ main {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
+  transition: background-color 200ms;
 }
 .passwordSettings_options_generateButton button:hover {
   background-color: #9a5cd0;
 }
 
-@media only screen and (max-width: 450px) {
+.footer {
+  background-color: #130e16;
+  border-top: 1px solid rgba(61, 34, 78, 0.6);
+  padding: 3rem 6%;
+}
+.footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+.footer__brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+.footer__copy {
+  font-size: 0.85rem;
+  color: #a89bc0;
+}
+.footer__note {
+  font-size: 0.75rem;
+  color: rgba(168, 155, 192, 0.6);
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+  }
+  .hero__content {
+    align-items: center;
+  }
+  .hero__sub {
+    text-align: center;
+  }
+  .hero__actions {
+    justify-content: center;
+  }
+  .hero__stats {
+    justify-content: center;
+  }
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .container {
-    height: 39%;
-    width: 70%;
+    width: 80%;
   }
 }
-@media only screen and (min-width: 450px) {
-  .container {
-    height: 45%;
-    width: 60%;
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 1.2rem 4%;
   }
-}
-@media only screen and (min-width: 600px) {
-  .container {
-    height: 50%;
-    width: 50%;
+  .hero {
+    padding: 7rem 4% 4rem;
   }
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    height: 60%;
-    width: 50%;
+  .hero__stat-divider {
+    display: none;
   }
-}
-@media only screen and (min-width: 992px) {
+  .hero__stats {
+    gap: 1.4rem;
+  }
+  .features {
+    padding: 5rem 4%;
+  }
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+  .generator-section {
+    padding: 5rem 4%;
+  }
   .container {
-    height: 60%;
-    width: 35%;
+    width: 92%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .container {
-    height: 70%;
-    width: 30%;
+    width: 420px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
